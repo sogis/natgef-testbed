@@ -6,4 +6,5 @@ CONTRACTED MODEL NGK_SO_FunctionsExt
     !!@ fn.return = "Boolean";
     !!@ fn.since = "2024-01-23";
     FUNCTION IsInsideAreaByCodeEnum (Objects: OBJECTS OF ANYCLASS; GeometryAttr: TEXT; CodeAttr: TEXT): BOOLEAN;
+    !! Was ist, wenn in der Objektmenge mehr als zwei Enum-Werte enthalten sind? Bei den drei enthaltenen Enum-Werten A,B,C wird geprüft A-Obj inside B-Obj und B-Obj inside C-Obj?
 END NGK_SO_FunctionsExt.
