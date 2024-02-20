@@ -2,7 +2,9 @@
 <HEADERSECTION SENDER="ili2gpkg-4.10.0-c2af4b50c5475f788286f974812b52bb0f9b19bc" VERSION="2.3"><MODELS><MODEL NAME="SO_AFU_Naturgefahren_20230802" VERSION="2023-08-02" URI="http://geo.so.ch/models/AFU"></MODEL></MODELS></HEADERSECTION>
 <DATASECTION>
 <SO_AFU_Naturgefahren_20230802.Auftraege BID="SO_AFU_Naturgefahren_20230802.Auftraege">
-<SO_AFU_Naturgefahren_20230802.Auftraege.Auftrag TID="701051de-6f2f-476d-81fb-43b8885ae7fc" delete=""><Kennung>Himmelried</Kennung><Fachstelle>AfU Solothurn</Fachstelle><Abschlussjahr>2023</Abschlussjahr><Deklaration>Nachfuehrung</Deklaration><Bemerkung>Pilot neues Datenmodell</Bemerkung></SO_AFU_Naturgefahren_20230802.Auftraege.Auftrag>
+<SO_AFU_Naturgefahren_20230802.Auftraege.Autor TID="0d5527a7-b50a-411a-a35c-1e7aeb1ab917"><Buero>Gruner AG</Buero><Filiale>Oberwil</Filiale></SO_AFU_Naturgefahren_20230802.Auftraege.Autor>
+<SO_AFU_Naturgefahren_20230802.Auftraege.Auftrag TID="701051de-6f2f-476d-81fb-43b8885ae7fc"><Kennung>Himmelried</Kennung><Fachstelle>AfU Solothurn</Fachstelle><Abschlussjahr>2023</Abschlussjahr><Deklaration>Nachfuehrung</Deklaration><Bemerkung>Pilot neues Datenmodell</Bemerkung></SO_AFU_Naturgefahren_20230802.Auftraege.Auftrag>
+<SO_AFU_Naturgefahren_20230802.Auftraege.Auftrag TID="701051de-6f2f-476d-81fb-43b8885ae7ff"><Kennung>Himmelried</Kennung><Fachstelle>AfU Solothurn</Fachstelle><Abschlussjahr>2023</Abschlussjahr><Deklaration>Nachfuehrung</Deklaration><Bemerkung>Pilot neues Datenmodell</Bemerkung></SO_AFU_Naturgefahren_20230802.Auftraege.Auftrag>
 </SO_AFU_Naturgefahren_20230802.Auftraege>
 </DATASECTION>
 </TRANSFER>
