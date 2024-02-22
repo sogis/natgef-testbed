@@ -89,6 +89,6 @@ Die 76 Constraints wurden dafür in 12 Typen-Kategorien eingeteilt und für jede
 ## Aufruf Testbed (Powershell)
 
 ```
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/sogis/p-naturgefahren-ili/feedback-ojeker/modell/SO_AFU_Naturgefahren_20230802.ili" -OutFile "SO_AFU_Naturgefahren_20230802.ili"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/sogis/p-naturgefahren-ili/main/modell/SO_AFU_Naturgefahren_20230802.ili" -OutFile "SO_AFU_Naturgefahren_20230802.ili"
 java.exe -jar .\_Runner\interlis-testbed-runner-0.0.1-SNAPSHOT\lib\interlis-testbed-runner-0.0.1-SNAPSHOT.jar --validator ilivalidator-1.14.2-SNAPSHOT.jar .\TestSuite-1
 ```
