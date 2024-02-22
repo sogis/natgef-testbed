@@ -36,7 +36,7 @@ Die 76 Constraints wurden dafür in 12 Typen-Kategorien eingeteilt und für jede
 | | |CheckBefundBefundJaehrlichkeitHauptprozess| |
 |8: Mandatory.Defined|MANDATORY CONSTRAINT Prozessquelle_R->Teilauftrag_R->Hauptprozess == #Wasser AND DEFINED(Fliessrichtungspfeil_R);|CheckFliessrichtungspfeilZuHauptprozess|Der Failcase enthält den referenzierten Teilauftrag mit modifiziertem Hauptprozess (#Rutschung).|
 | | |CheckProzessquelleBefundJaehrlichkeit| |
-|9: Set.Ueberragung|SET CONSTRAINT GeoW_FunctionsExt.IsInsideAreaByCodeEnum(GeoW_FunctionsExt.GetInGroups(ALL, "PQ_Jaehrlichkeit_SteinBlockschlag_R->Prozessquelle_R"), "Geometrie" ,"IWCode");|CheckBefundSteinBlockschlagKeineUeberragung|Der Failcase enthält drei Befunde, welche zur gleichen Prozessquelle referenzieren, sich aber bzgl. aufsteigendem IWCode überragen (100>300) oder gemeinsame Kanten (30>100) haben.|
+|9: Set.Ueberragung|SET CONSTRAINT GeoW_FunctionsExt.IsInsideAreaByCode(GeoW_FunctionsExt.GetInGroups(ALL, "PQ_Jaehrlichkeit_SteinBlockschlag_R->Prozessquelle_R"), "Geometrie" ,"IWCode");|CheckBefundSteinBlockschlagKeineUeberragung|Der Failcase enthält drei Befunde, welche zur gleichen Prozessquelle referenzieren, sich aber bzgl. aufsteigendem IWCode überragen (100>300) oder gemeinsame Kanten (30>100) haben.|
 | | |CheckBefundBergFelssturzKeineUeberragung| |
 | | |CheckBefundHangmureKeineUeberragung| |
 | | |CheckBefundAbsenkungKeineUeberragung| |
