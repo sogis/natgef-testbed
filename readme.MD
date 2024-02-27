@@ -90,5 +90,7 @@ Die 76 Constraints wurden dafür in 12 Typen-Kategorien eingeteilt und für jede
 
 ```
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/sogis/p-naturgefahren-ili/main/modell/SO_AFU_Naturgefahren_20230802.ili" -OutFile "SO_AFU_Naturgefahren_20230802.ili"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/GeoWerkstatt/interlis-functions-ngk-so/main/src/model/NGK_SO_FunctionsExt_23.ili" -OutFile "NGK_SO_FunctionsExt_23.ili"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/GeoWerkstatt/geow-interlis-functions/master/src/model/GeoW_FunctionsExt_23.ili" -OutFile "GeoW_FunctionsExt_23.ili"
 java.exe -jar .\_Runner\interlis-testbed-runner-0.0.1-SNAPSHOT\lib\interlis-testbed-runner-0.0.1-SNAPSHOT.jar --validator ilivalidator-1.14.2-SNAPSHOT.jar .\TestSuite-1
 ```
