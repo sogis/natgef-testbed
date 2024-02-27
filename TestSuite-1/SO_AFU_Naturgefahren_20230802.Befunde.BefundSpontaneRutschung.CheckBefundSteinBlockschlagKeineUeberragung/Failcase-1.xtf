@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Der Failcase enthält drei Befunde, welche zur gleichen Prozessquelle referenzieren, sich aber bzgl. aufsteigendem IWCode überragen (100>300) oder gemeinsame Kanten (30>100) haben. -->
 <TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3">
 <HEADERSECTION SENDER="ili2gpkg-5.0.0-20f2bb62307ba6329a125fc6f10965ad9a4e6300" VERSION="2.3"><MODELS><MODEL NAME="SO_AFU_Naturgefahren_20230802" VERSION="2024-02-14" URI="http://geo.so.ch/models/AFU"></MODEL></MODELS></HEADERSECTION>
 <DATASECTION>
@@ -10,3 +9,4 @@
 </SO_AFU_Naturgefahren_20230802.Befunde>
 </DATASECTION>
 </TRANSFER>
+<!-- Der Failcase enthält drei Befunde, welche zur gleichen Prozessquelle referenzieren, sich aber bzgl. aufsteigendem IWCode überragen (100>300) oder gemeinsame Kanten (30>100) haben. -->

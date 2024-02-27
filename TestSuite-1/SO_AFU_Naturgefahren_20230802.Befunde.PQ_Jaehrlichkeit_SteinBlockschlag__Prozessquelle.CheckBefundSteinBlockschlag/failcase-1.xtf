@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Der Failcase enthält einen den referenzierten Teilauftrag mit modifiziertem Hauptprozess (#Wasser). -->
 <TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3">
 <HEADERSECTION SENDER="ili2gpkg-4.10.0-c2af4b50c5475f788286f974812b52bb0f9b19bc" VERSION="2.3"><MODELS><MODEL NAME="SO_AFU_Naturgefahren_20230802" VERSION="2023-08-02" URI="http://geo.so.ch/models/AFU"></MODEL></MODELS></HEADERSECTION>
 <DATASECTION>
@@ -8,3 +7,4 @@
 </SO_AFU_Naturgefahren_20230802.Auftraege>
 </DATASECTION>
 </TRANSFER>
+<!-- Der Failcase enthält einen den referenzierten Teilauftrag mit modifiziertem Hauptprozess (#Wasser). -->
