@@ -15,7 +15,7 @@ Die 76 Constraints wurden dafür in 12 Typen-Kategorien eingeteilt und für jede
 |3: Mandatory.OR|MANDATORY CONSTRAINT (Hauptprozess != #Wasser) OR Wasserkennwerte;|CheckTeilauftragWasserKennwert|OK|
 |4: Mandatory.GetArea|MANDATORY CONSTRAINT GeoW_FunctionsExt.GetArea(THIS,"Geometrie") > 100;|CheckAbklperimeterFlaechenGroesse|OK|
 | | |CheckBefundFlaechenGroesse| |
-|5: Mandatory.IsInsideExternal|MANDATORY CONSTRAINT GeoW_FunctionsExt.IsInsideExternalDataset("SO_Hoheitsgrenzen_Publikation_20170626.Hoheitsgrenzen.Kantonsgrenze.Geometrie", "c6db23e0-0536-4055-a50c-11d2d1e4c6ef" ,THIS, "Geometrie");|CheckAbklperimeterInnerhalbSO|OK|
+|5: Mandatory.IsInsideExternal|MANDATORY CONSTRAINT GeoW_FunctionsExt.IsInsideExternalXtf("SO_Hoheitsgrenzen_Publikation_20170626.Hoheitsgrenzen.Kantonsgrenze.Geometrie", "c6db23e0-0536-4055-a50c-11d2d1e4c6ef" ,THIS, "Geometrie");|CheckAbklperimeterInnerhalbSO|OK|
 |6: Mandatory.RingCount|MANDATORY CONSTRAINT GeoW_FunctionsExt.GetInnerRingsCount(THIS,  "Geometrie") == 0; |CheckAbklperimeterKeineLoecher|OK|
 | | |CheckBefundKeineLoecher| |
 |7: Mandatory.Equal|MANDATORY CONSTRAINT Prozessquelle_R->Teilauftrag_R->Hauptprozess == #Sturz;|CheckBefundSteinBlockschlag|OK|
@@ -72,7 +72,7 @@ Die 76 Constraints wurden dafür in 12 Typen-Kategorien eingeteilt und für jede
 | | |CheckAbklperimeterBeurteilungHangmure| |
 | | |CheckAbklperimeterBeurteilungSpontaneRutschung| |
 | | |CheckAbklperimeterBeurteilungPermanenteRutschung| |
-|11: Mandatory.IsInside|MANDATORY CONSTRAINT (GeoW_FunctionsExt.IsInside(GeoW_FunctionsExt.Union(PQ_Jaehrlichkeit_SteinBlockschlag_R->Prozessquelle_R->Teilauftrag_R->Abklaerungsperimeter_R, "Geometrie"), THIS, "Geometrie"));|CheckBefundSteinBlockschlagImAbklPerimeter|OK|
+|11: Mandatory.IsInside|MANDATORY CONSTRAINT (GeoW_FunctionsExt.IsInside(GeoW_FunctionsExt.Union(PQ_Jaehrlichkeit_SteinBlockschlag_R->Prozessquelle_R->Teilauftrag_R->Abklaerungsperimeter_R, "Geometrie"), UNDEFINED, THIS, "Geometrie"));|CheckBefundSteinBlockschlagImAbklPerimeter|OK|
 | | |CheckBefundBergFelssturzImAbklPerimeter| |
 | | |CheckBefundHangmureImAbklPerimeter| |
 | | |CheckBefundUfererosionImAbklPerimeter| |
