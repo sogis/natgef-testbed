@@ -1,32 +1,47 @@
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-TestSuite-1/output/GK_NFM_Himmelried_neustesDM_2.log
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Auftraege.Abklaerungsperimeter.CheckAbklperimeterFlaechenGroesse/Failcase-1.log
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Auftraege.Abklaerungsperimeter.CheckAbklperimeterInnerhalbSO/Failcase-1.log
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Auftraege.Abklaerungsperimeter.CheckAbklperimeterKeineLoecher/Failcase-1.log
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Auftraege.Auftrag.CheckAuftragEintrag/Failcase-1.log
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Auftraege.Auftrag.CheckAuftragEintrag/Failcase-1_merged.xtf
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Auftraege.Auftrag.CheckAuftragEintrag/GK_NFM_Himmelried_neustesDM_2.log
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Auftraege.Auftrag.CheckAuftragEintrag/GK_NFM_Himmelried_neustesDM_2_merged.xtf
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Auftraege.Auftrag.CheckAuftragKennungen/Failcase-1.log
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Auftraege.Auftrag.CheckAuftragKennungen/Failcase-1_merged.xtf
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Auftraege.Teilauftrag.CheckTeilauftragWasserKennwert/Failcase-1.log
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Auftraege.Teilauftrag.CheckTeilauftragWasserKennwert/Failcase-1_merged.xtf
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Befunde.BefundSpontaneRutschung.BefundSpontaneRutschungKeineUeberragung/Failcase-1.log
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Befunde.BefundSpontaneRutschung.CheckBefundSpontaneRutschungKeineUeberragung/Failcase-1.log
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Befunde.BefundSpontaneRutschung.CheckBefundSpontaneRutschungKeineUeberragung/Failcase-1_merged.xtf
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Befunde.BefundSteinBlockschlag.CheckBefundImAbklPerimeter/Failcase-1.log
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Befunde.BefundSteinBlockschlag.CheckBefundSteinBlockschlagImAbklPerimeter/failcase-1.log
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Befunde.BefundSteinBlockschlag.CheckBefundSteinBlockschlagImAbklPerimeter/failcase-1_merged.xtf
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Befunde.BefundSteinBlockschlag.CheckBefundSteinBlockschlagJaehrlichkeit-1/failcase-1.log
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Befunde.BefundSteinBlockschlag.CheckBefundSteinBlockschlagJaehrlichkeit-1/failcase-1_merged.xtf
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Befunde.PQ_Jaehrlichkeit_SteinBlockschlag__Prozessquelle.CheckBefundSteinBlockschlag/failcase-1.log
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Befunde.PQ_Jaehrlichkeit_SteinBlockschlag__Prozessquelle.CheckBefundSteinBlockschlag/failcase-1_merged.xtf
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Befunde.Prozessquelle__Fliessrichtungspfeil.CheckFliessrichtungspfeilZuHauptprozess/failcase-1.log
-TestSuite-1/output/SO_AFU_Naturgefahren_20230802.Befunde.Prozessquelle__Fliessrichtungspfeil.CheckFliessrichtungspfeilZuHauptprozess/failcase-1_merged.xtf
-misc/testbed-data.qgs~
-misc/testbed-data.qgs
-misc/testbed-data.gpkg-wal
-misc/testbed-data.gpkg-shm
-misc/testbed-data.gpkg
-misc/_bak/testbed-data.gpkg
+# Project-specific files and folders
+TestSuite-1/output/
+misc/
 GK_NFM_Himmelried_neustesDM_2.zip
+
+### IntelliJ IDEA ###
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
