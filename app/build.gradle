@@ -1,11 +1,17 @@
 plugins {
-    // Apply the application plugin to add support for building a CLI application in Java.
-    id 'application'
+    id 'java'
 }
 
 repositories {
-    // Use Maven Central for resolving dependencies.
     mavenCentral()
+    maven { url 'https://jars.interlis.ch' }
+
+    maven {
+        url 'https://s01.oss.sonatype.org/content/repositories/snapshots'
+        mavenContent {
+            snapshotsOnly()
+        }
+    }
 }
 
 dependencies {
@@ -14,8 +20,11 @@ dependencies {
 
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
-    // This dependency is used by the application.
-    implementation 'com.google.guava:guava:32.1.1-jre'
+    testImplementation 'io.github.sogis:ilivalidator-custom-functions-geometries:0.0.8'
+    testImplementation 'ch.interlis:ilivalidator:1.14.1'
+    testImplementation 'ch.geowerkstatt.ilivalidator.extensions.functions:geow-interlis-functions:0.1.10-SNAPSHOT'
+    testImplementation 'ch.geowerkstatt.ilivalidator.extensions.functions:interlis-functions-ngk-so:0.0.1-SNAPSHOT'
+    testImplementation 'ch.geowerkstatt.interlis.testbed.runner:interlis-testbed-runner:0.0.1-SNAPSHOT'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -25,28 +34,7 @@ java {
     }
 }
 
-application {
-    // Define the main class for the application.
-    mainClass = 'ch.so.agi.natgef.testbed.App'
-}
-
-tasks.named('test') {
+test {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
-}
-
-task runExec(type:Exec) {
-  workingDir '../_Runner/interlis-testbed-runner-0.0.1-SNAPSHOT/lib'
-
-  commandLine 'java','-jar','interlis-testbed-runner-0.0.1-SNAPSHOT.jar',"$rootDir/TestSuite-1"
-}
-
-task runJar(type:JavaExec) {
-  // Executable jars can have only _one_ jar on the classpath.
-  classpath = files("$projectDir/_Runner/interlis-testbed-runner-0.0.1-SNAPSHOT/lib/interlis-testbed-runner-0.0.1-SNAPSHOT.jar")
-
-  // 'main' does not need to be specified
-
-  // arguments to pass to the application
-  args 'appArg1'
 }
