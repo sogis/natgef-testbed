@@ -5,6 +5,7 @@ build/
 !**/src/test/**/build/
 
 # Project-specific files and folders
+TestSuite-1/models/
 TestSuite-1/output/
 misc/
 GK_NFM_Himmelried_neustesDM_2.zip
