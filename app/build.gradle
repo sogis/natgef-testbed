@@ -37,4 +37,7 @@ java {
 test {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+
+    // Start a new JVM for every test class to clear function caches.
+    forkEvery = 1
 }
