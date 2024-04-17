@@ -11,6 +11,9 @@ import ch.interlis.iox_j.validator.ValidationConfig;
 import org.interlis2.validator.Validator;
 import org.junit.jupiter.api.Assertions;
 
+import java.io.IOException;
+import java.io.UncheckedIOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.Map;
@@ -42,12 +45,15 @@ public final class TestbedHelper {
     }
 
     public static boolean validate(Path xtfFile, Path logFile) {
+        logFile = logFile.toAbsolutePath().normalize();
+        createParentDirectories(logFile);
+
         String testbedDir = BASE_PATH.toAbsolutePath().normalize().toString();
         String testbedModelDir = MODEL_PATH.toAbsolutePath().normalize().toString();
 
         Settings settings = new Settings();
         settings.setValue(Validator.SETTING_ILIDIRS, testbedDir + ";" + testbedModelDir + ";http://models.interlis.ch/");
-        settings.setValue(Validator.SETTING_LOGFILE, logFile.toAbsolutePath().normalize().toString());
+        settings.setValue(Validator.SETTING_LOGFILE, logFile.toString());
         settings.setTransientValue(ch.interlis.iox_j.validator.Validator.CONFIG_VERBOSE, ValidationConfig.TRUE);
         settings.setTransientObject(ch.interlis.iox_j.validator.Validator.CONFIG_CUSTOM_FUNCTIONS, CUSTOM_FUNCTIONS);
 
@@ -81,6 +87,14 @@ public final class TestbedHelper {
             assertTrue(hasConstraintError, "Log file should contain constraint error.");
         } catch (ValidatorException e) {
             Assertions.fail(e);
+        }
+    }
+
+    private static void createParentDirectories(Path path) {
+        try {
+            Files.createDirectories(path.getParent());
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
         }
     }
 }
