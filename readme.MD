@@ -86,7 +86,13 @@ Die 76 Constraints wurden dafür in 12 Typen-Kategorien eingeteilt und für jede
 | | |CheckBefundJaehrlichkeitImAbklPerimeter| |
 |12: Set.areAreas|SET CONSTRAINT INTERLIS.areAreas(GeoW_FunctionsExt.GetInGroups(ALL, "Prozessquelle_R"), UNDEFINED, >> Geometrie);|CheckBefundBefundJaehrlichkeitFlaechendeckung|OK|
 
-## Aufruf Testbed (Powershell)
+## Aufruf Testbed (Gradle)
+
+```
+./gradlew clean test
+```
+
+## Aufruf Testbed via Runner (Powershell)
 
 ```
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/sogis/p-naturgefahren-ili/main/modell/SO_AFU_Naturgefahren_20230802.ili" -OutFile "SO_AFU_Naturgefahren_20230802.ili"
