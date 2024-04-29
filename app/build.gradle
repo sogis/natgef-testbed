@@ -5,13 +5,6 @@ plugins {
 repositories {
     mavenCentral()
     maven { url 'https://jars.interlis.ch' }
-
-    maven {
-        url 'https://s01.oss.sonatype.org/content/repositories/snapshots'
-        mavenContent {
-            snapshotsOnly()
-        }
-    }
 }
 
 dependencies {
@@ -22,9 +15,9 @@ dependencies {
 
     testImplementation 'io.github.sogis:ilivalidator-custom-functions-geometries:0.0.8'
     testImplementation 'ch.interlis:ilivalidator:1.14.1'
-    testImplementation 'ch.geowerkstatt.ilivalidator.extensions.functions:geow-interlis-functions:0.1.10-SNAPSHOT'
-    testImplementation 'ch.geowerkstatt.ilivalidator.extensions.functions:interlis-functions-ngk-so:0.0.1-SNAPSHOT'
-    testImplementation 'ch.geowerkstatt.interlis.testbed.runner:interlis-testbed-runner:0.0.1-SNAPSHOT'
+    testImplementation 'ch.geowerkstatt.ilivalidator.extensions.functions:geow-interlis-functions:0.2.0'
+    testImplementation 'ch.geowerkstatt.ilivalidator.extensions.functions:interlis-functions-ngk-so:1.0.0'
+    testImplementation 'ch.geowerkstatt.interlis.testbed.runner:interlis-testbed-runner:1.0.0'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
