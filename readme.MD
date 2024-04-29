@@ -1,7 +1,7 @@
 # Testbed Constraints Datenmodell 'SO_AFU_Naturgefahren_20230802'
 
 Mittels diesem Testbed kann das Modell 'SO_AFU_Naturgefahren_20230802' in bezug auf die spezifischen Constraints getestet werden.
-Die ca. 110 Constraints wurden dafür in 13 Typen-Kategorien eingeteilt und für jeden Kategorie liegt mindestens ein Failcase vor:
+Die ca. 110 Constraints wurden dafür in 12 Typen-Kategorien eingeteilt und für jeden Kategorie liegt mindestens ein Failcase vor:
 
 ## Übersicht Constraint-Typen / Testbed-Abdeckung
 
@@ -14,7 +14,7 @@ Die ca. 110 Constraints wurden dafür in 13 Typen-Kategorien eingeteilt und für
 | | |CheckProzessquelleKennung| |
 |3: Mandatory.OR|MANDATORY CONSTRAINT (Hauptprozess != #Wasser) OR Wasserkennwerte;|CheckTeilauftragWasserKennwert|OK|
 |4: Mandatory.GetArea|MANDATORY CONSTRAINT GeoW_FunctionsExt.GetArea(THIS,"Geometrie") > 100;|CheckAbklperimeterFlaechenGroesse|OK|
-| | |CheckBefundFlaechenGroesse| |
+| | |CheckAbklperimeterFlaechenGroesse| |
 |5: Mandatory.IsInsideExternal|MANDATORY CONSTRAINT GeoW_FunctionsExt.IsInsideExternalXtf("SO_Hoheitsgrenzen_Publikation_20170626.Hoheitsgrenzen.Kantonsgrenze.Geometrie", "c6db23e0-0536-4055-a50c-11d2d1e4c6ef" ,THIS, "Geometrie");|CheckAbklperimeterInnerhalbSO|OK|
 |6: Mandatory.RingCount|MANDATORY CONSTRAINT GeoW_FunctionsExt.GetInnerRingsCount(THIS,  "Geometrie") == 0; |CheckAbklperimeterKeineLoecher|OK|
 | | |CheckBefundKeineLoecher| |
@@ -35,7 +35,6 @@ Die ca. 110 Constraints wurden dafür in 13 Typen-Kategorien eingeteilt und für
 | | |CheckBefundUeberschwemmungStatischHauptprozess| |
 | | |CheckBefundBefundJaehrlichkeitHauptprozess| |
 |8: Mandatory.Defined|MANDATORY CONSTRAINT Prozessquelle_R->Teilauftrag_R->Hauptprozess == #Wasser AND DEFINED(Fliessrichtungspfeil_R);|CheckFliessrichtungspfeilZuHauptprozess|OK.|
-| | |CheckProzessquelleBefundJaehrlichkeit| |
 |9: Set.Ueberragung|SET CONSTRAINT GeoW_FunctionsExt.IsInsideAreaByCode(GeoW_FunctionsExt.GetInGroups(ALL, "PQ_Jaehrlichkeit_SteinBlockschlag_R->Prozessquelle_R"), "Geometrie" ,"IWCode");|CheckBefundSteinBlockschlagKeineUeberragung|OK|
 | | |CheckBefundBergFelssturzKeineUeberragung| |
 | | |CheckBefundHangmureKeineUeberragung| |
@@ -84,8 +83,7 @@ Die ca. 110 Constraints wurden dafür in 13 Typen-Kategorien eingeteilt und für
 | | |CheckBefundUeberschwemmungDynamischImAbklPerimeter| |
 | | |CheckBefundUeberschwemmungStatischImAbklPerimeter| |
 | | |CheckBefundJaehrlichkeitImAbklPerimeter| |
-|12: Set.areAreas|SET CONSTRAINT INTERLIS.areAreas(GeoW_FunctionsExt.GetInGroups(ALL, "Prozessquelle_R"), UNDEFINED, >> Geometrie);|CheckBefundBefundJaehrlichkeitFlaechendeckung|OK|
-|13: Set.areAreas mit Filter|SET CONSTRAINT WHERE IWCode == #rot_stark_30 OR IWCode == #rot_mittel_30 OR IWCode == #blau_schwach_30: INTERLIS.areAreas(GeoW_FunctionsExt.GetInGroups(ALL, "Prozessquelle_R"),UNDEFINED, >> Geometrie);|CheckBefundUeberschwemmungStatischKeineUeberlappung-30|OK|
+|12: Set.areAreas mit Filter|SET CONSTRAINT WHERE IWCode == #rot_stark_30 OR IWCode == #rot_mittel_30 OR IWCode == #blau_schwach_30: INTERLIS.areAreas(GeoW_FunctionsExt.GetInGroups(ALL, "Prozessquelle_R"),UNDEFINED, >> Geometrie);|CheckBefundUeberschwemmungStatischKeineUeberlappung-300|OK|
 | | |CheckBefundSteinBlockschlagKeineUeberlappung-30| |
 | | |CheckBefundSteinBlockschlagKeineUeberlappung-100| |
 | | |CheckBefundSteinBlockschlagKeineUeberlappung-300| |
