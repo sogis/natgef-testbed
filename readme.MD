@@ -1,7 +1,7 @@
 # Testbed Constraints Datenmodell 'SO_AFU_Naturgefahren_20230802'
 
 Mittels diesem Testbed kann das Modell 'SO_AFU_Naturgefahren_20230802' in bezug auf die spezifischen Constraints getestet werden.
-Die 76 Constraints wurden dafür in 12 Typen-Kategorien eingeteilt und für jeden Kategorie liegt mindestens ein Failcase vor:
+Die ca. 110 Constraints wurden dafür in 13 Typen-Kategorien eingeteilt und für jeden Kategorie liegt mindestens ein Failcase vor:
 
 ## Übersicht Constraint-Typen / Testbed-Abdeckung
 
@@ -85,6 +85,38 @@ Die 76 Constraints wurden dafür in 12 Typen-Kategorien eingeteilt und für jede
 | | |CheckBefundUeberschwemmungStatischImAbklPerimeter| |
 | | |CheckBefundJaehrlichkeitImAbklPerimeter| |
 |12: Set.areAreas|SET CONSTRAINT INTERLIS.areAreas(GeoW_FunctionsExt.GetInGroups(ALL, "Prozessquelle_R"), UNDEFINED, >> Geometrie);|CheckBefundBefundJaehrlichkeitFlaechendeckung|OK|
+|13: Set.areAreas mit Filter|SET CONSTRAINT WHERE IWCode == #rot_stark_30 OR IWCode == #rot_mittel_30 OR IWCode == #blau_schwach_30: INTERLIS.areAreas(GeoW_FunctionsExt.GetInGroups(ALL, "Prozessquelle_R"),UNDEFINED, >> Geometrie);|CheckBefundUeberschwemmungStatischKeineUeberlappung-30|OK|
+| | |CheckBefundSteinBlockschlagKeineUeberlappung-30| |
+| | |CheckBefundSteinBlockschlagKeineUeberlappung-100| |
+| | |CheckBefundSteinBlockschlagKeineUeberlappung-300| |
+| | |CheckBefundSteinBlockschlagKeineUeberlappung-Restgef| |
+| | |CheckBefundBergFelssturzKeineUeberlappung-30| |
+| | |CheckBefundBergFelssturzKeineUeberlappung-100| |
+| | |CheckBefundBergFelssturzKeineUeberlappung-300| |
+| | |CheckBefundBergFelssturzKeineUeberlappung-Restgef| |
+| | |CheckBefundHangmureKeineUeberlappung-30| |
+| | |CheckBefundHangmureKeineUeberlappung-100| |
+| | |CheckBefundHangmureKeineUeberlappung-300| |
+| | |CheckBefundHangmureKeineUeberlappung-Restgef| |
+| | |CheckBefundAbsenkungKeineUeberlappung-permanent| |
+| | |CheckBefundeEinsturzKeineUeberlappung-permanent| |
+| | |CheckBefundePermanenteRutschungKeineUeberlappung-permanent| |
+| | |CheckBefundePermanenteRutschungKeineUeberlappung-Restgef| |
+| | |CheckBefundSpontaneRutschungKeineUeberlappung-30| |
+| | |CheckBefundSpontaneRutschungKeineUeberlappung-100| |
+| | |CheckBefundSpontaneRutschungKeineUeberlappung-300| |
+| | |CheckBefundSpontaneRutschungKeineUeberlappung-Restgef| |
+| | |CheckBefundUebermurungKeineUeberlappung-30| |
+| | |CheckBefundUebermurungKeineUeberlappung-100| |
+| | |CheckBefundUebermurungKeineUeberlappung-300| |
+| | |CheckBefundUeberschwemmungDynamischKeineUeberlappung-30| |
+| | |CheckBefundUeberschwemmungDynamischKeineUeberlappung-100| |
+| | |CheckBefundUeberschwemmungDynamischKeineUeberlappung-300| |
+| | |CheckBefundUeberschwemmungDynamischKeineUeberlappung-Restgef| |
+| | |CheckBefundUeberschwemmungStatischKeineUeberlappung-30| |
+| | |CheckBefundUeberschwemmungStatischKeineUeberlappung-100| |
+| | |CheckBefundUeberschwemmungStatischKeineUeberlappung-300| |
+| | |CheckBefundUeberschwemmungStatischKeineUeberlappung-Restgef| |
 
 ## Aufruf Testbed (Powershell)
 
