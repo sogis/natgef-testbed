@@ -116,7 +116,13 @@ Die ca. 110 Constraints wurden dafür in 12 Typen-Kategorien eingeteilt und für
 | | |CheckBefundUeberschwemmungStatischKeineUeberlappung-300| |
 | | |CheckBefundUeberschwemmungStatischKeineUeberlappung-Restgef| |
 
-## Aufruf Testbed (Powershell)
+## Aufruf Testbed (Gradle)
+
+```
+./gradlew clean test
+```
+
+## Aufruf Testbed via Runner (Powershell)
 
 ```
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/sogis/p-naturgefahren-ili/main/modell/SO_AFU_Naturgefahren_20230802.ili" -OutFile "SO_AFU_Naturgefahren_20230802.ili"

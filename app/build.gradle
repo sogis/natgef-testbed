@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jars.interlis.ch' }
+
+    maven {
+        url 'https://s01.oss.sonatype.org/content/repositories/snapshots'
+        mavenContent {
+            snapshotsOnly()
+        }
+    }
+}
+
+dependencies {
+    // Use JUnit Jupiter for testing.
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    testImplementation 'io.github.sogis:ilivalidator-custom-functions-geometries:0.0.8'
+    testImplementation 'ch.interlis:ilivalidator:1.14.1'
+    testImplementation 'ch.geowerkstatt.ilivalidator.extensions.functions:geow-interlis-functions:0.1.10-SNAPSHOT'
+    testImplementation 'ch.geowerkstatt.ilivalidator.extensions.functions:interlis-functions-ngk-so:0.0.1-SNAPSHOT'
+    testImplementation 'ch.geowerkstatt.interlis.testbed.runner:interlis-testbed-runner:0.0.1-SNAPSHOT'
+}
+
+// Apply a specific Java toolchain to ease working on different environments.
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+test {
+    // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
+
+    // Start a new JVM for every test class to clear function caches.
+    forkEvery = 1
+}
