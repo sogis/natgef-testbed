@@ -53,7 +53,7 @@ public final class TestbedHelper {
         prefixes.put("CheckAuftragEintrag", "SO_AFU_Naturgefahren_20230802.Auftraege.Auftrag.");
         prefixes.put("CheckAuftragKennungen", "SO_AFU_Naturgefahren_20230802.Auftraege.Auftrag.");
         prefixes.put("CheckTeilauftragWasserKennwert", "SO_AFU_Naturgefahren_20230802.Auftraege.Teilauftrag.");
-        prefixes.put("SO_AFU_Naturgefahren_20230802.Befunde.BefundSpontaneRutschung.", "CheckBefundSpontaneRutschungKeineUeberragung");
+        prefixes.put("CheckBefundSpontaneRutschungKeineUeberragung","SO_AFU_Naturgefahren_20230802.Befunde.BefundSpontaneRutschung.");
         prefixes.put("CheckBefundSteinBlockschlagImAbklPerimeter", "SO_AFU_Naturgefahren_20230802.Befunde.BefundSteinBlockschlag.");
         prefixes.put("CheckBefundSteinBlockschlagJaehrlichkeit-30", "SO_AFU_Naturgefahren_20230802.Befunde.BefundSteinBlockschlag.");
         prefixes.put("CheckBefundSteinBlockschlagKeineUeberlappung-300", "SO_AFU_Naturgefahren_20230802.Befunde.BefundSteinBlockschlag.");
@@ -81,30 +81,20 @@ public final class TestbedHelper {
         return Validator.runValidation(xtfFile.toAbsolutePath().normalize().toString(), settings);
     }
 
-    public static void assertMergeHasConstraintError(Path patchFile, String constraintName) {
-        String filenameWithoutExtension = patchFile.getFileName().toString().replace(".xtf", "");
-        Path outputFolder = TestbedHelper.OUTPUT_PATH.resolve(constraintName);
-        Path mergedFile = outputFolder.resolve(filenameWithoutExtension + "-merged.xtf");
-        Path logFile = outputFolder.resolve(filenameWithoutExtension + "-merged.log");
-
-        assertMerge(patchFile, mergedFile);
-        assertInvalidXtf(mergedFile, logFile);
-        assertHasConstraintError(logFile, constraintName);
-    }
-
     public static void assertMergeHasConstraintError(String constraintName){
-        assertMergeHasConstraintError(constraintName, null);
+        assertMergeHasConstraintError(constraintName, TestbedHelper.FAILCASE_NAME_DEFAULT);
     }
 
     public static void assertMergeHasConstraintError(String constraintName, String failCaseFileName) {
-        if(failCaseFileName == null)
-            failCaseFileName = TestbedHelper.FAILCASE_NAME_DEFAULT;
 
-        String qualConstraintName = CONSTRAINT_PREFIXES.get(constraintName) + constraintName;
+        String prefix = CONSTRAINT_PREFIXES.get(constraintName);
+        if(prefix == null)
+            throw new RuntimeException("Qualified name prefix not defined for Constraint: " + constraintName);
 
-        Path patchFilePath = TestbedHelper.BASE_PATH.resolve(qualConstraintName).resolve(failCaseFileName);
+        String qualConstraintName = prefix + constraintName;
+        Path patchFilePath = TestbedHelper.BASE_PATH.resolve(constraintName).resolve(failCaseFileName);
         String filenameWithoutExtension = patchFilePath.getFileName().toString().replace(".xtf", "");
-        Path outputFolder = TestbedHelper.OUTPUT_PATH.resolve(qualConstraintName);
+        Path outputFolder = TestbedHelper.OUTPUT_PATH.resolve(constraintName);
         Path mergedFile = outputFolder.resolve(filenameWithoutExtension + "-merged.xtf");
         Path logFile = outputFolder.resolve(filenameWithoutExtension + "-merged.log");
 
