@@ -9,9 +9,6 @@ import java.nio.file.Path;
 public class AbklperimeterInnerhalbSOTest extends TestBase {
     @Test
     public void checkConstraint() {
-        String constraintName = "SO_AFU_Naturgefahren_20230802.Auftraege.Abklaerungsperimeter.CheckAbklperimeterInnerhalbSO";
-        Path patchFile = TestbedHelper.BASE_PATH.resolve(constraintName).resolve("Failcase-1.xtf");
-
-        TestbedHelper.assertMergeHasConstraintError(patchFile, constraintName);
+        TestbedHelper.assertMergeHasConstraintError("CheckAbklperimeterInnerhalbSO");
     }
 }
