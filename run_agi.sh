@@ -1,1 +1,0 @@
-java -jar $(pwd)/_Runner/interlis-testbed-runner-0.0.1-SNAPSHOT/lib/interlis-testbed-runner-0.0.1-SNAPSHOT.jar $(pwd)/TestSuite-1 -v /home/oliver/tools/ilivalidator-1.11.10/ilivalidator-1.11.10.jar

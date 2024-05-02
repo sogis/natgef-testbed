@@ -79,9 +79,9 @@ MODEL SO_AFU_Naturgefahren_20240515 (de)
       /** Art der Gefahrenbeurteilung -> siehe Wertebereich Deklarationen */
       Deklaration : MANDATORY Deklaration;
       Bemerkung : MTEXT*255;
-      !!@ name = "CheckAuftragEintrag"
-      !!@ ilivalid.msg = "Die Klasse Auftrag bedingt genau 1 Eintrag."  
-      SET CONSTRAINT INTERLIS.objectCount(ALL) == 1;
+      !!@ name = "CheckAuftragVorhanden"
+      !!@ ilivalid.msg = "Es muss mindestens ein Auftrag erfasst sein"  
+      SET CONSTRAINT INTERLIS.objectCount(ALL) > 0;
       !!@ name = "CheckAuftragKennungen"
       !!@ ilivalid.msg = "Es gibt mehrere identische Kennungen."  
       UNIQUE Kennung;

@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 
 import java.nio.file.Path;
 
-public class AuftragEintragTest extends TestBase {
+public class AuftragVorhandenTest extends TestBase {
     @Test
     public void checkConstraint() {
-        TestbedHelper.assertMergeHasConstraintError("CheckAuftragEintrag");
+        TestbedHelper.assertMergeHasConstraintError("CheckAuftragVorhanden");
     }
 }

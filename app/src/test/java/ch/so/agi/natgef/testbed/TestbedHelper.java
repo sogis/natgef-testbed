@@ -50,7 +50,7 @@ public final class TestbedHelper {
         prefixes.put("CheckAbklperimeterFlaechenGroesse", "SO_AFU_Naturgefahren_20240515.Auftraege.Abklaerungsperimeter.");
         prefixes.put("CheckAbklperimeterInnerhalbSO", "SO_AFU_Naturgefahren_20240515.Auftraege.Abklaerungsperimeter.");
         prefixes.put("CheckAbklperimeterKeineLoecher", "SO_AFU_Naturgefahren_20240515.Auftraege.Abklaerungsperimeter.");
-        prefixes.put("CheckAuftragEintrag", "SO_AFU_Naturgefahren_20240515.Auftraege.Auftrag.");
+        prefixes.put("CheckAuftragVorhanden", "SO_AFU_Naturgefahren_20240515.Auftraege.Auftrag.");
         prefixes.put("CheckAuftragKennungen", "SO_AFU_Naturgefahren_20240515.Auftraege.Auftrag.");
         prefixes.put("CheckTeilauftragWasserKennwert", "SO_AFU_Naturgefahren_20240515.Auftraege.Teilauftrag.");
         prefixes.put("CheckBefundSpontaneRutschungKeineUeberragung","SO_AFU_Naturgefahren_20240515.Befunde.BefundSpontaneRutschung.");
