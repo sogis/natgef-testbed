@@ -22,7 +22,7 @@ MODEL SO_AFU_Naturgefahren_20240515 (de)
 
     Jaehrlichkeit = 0 .. 9999999;
     JaehrlichkeitRestgefaehrdung = 300 .. 9999999;
-    JaehrlichkeitListe = (J_30,J_100,J_300,Restgefaehrdung) ORDERED;
+    JaehrlichkeitListe = (j_30,j_100,j_300,restgefaehrdung) ORDERED;
     Einzelflaeche = SURFACE WITH (STRAIGHTS) VERTEX GeometryCHLV95_V1.Coord2 WITHOUT OVERLAPS > 0.1;
 
     /** 
