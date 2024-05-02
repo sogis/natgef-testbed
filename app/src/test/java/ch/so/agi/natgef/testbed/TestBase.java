@@ -13,8 +13,8 @@ import java.nio.file.StandardCopyOption;
 public abstract class TestBase {
     @BeforeAll
     public static void setup() throws IOException, URISyntaxException {
-        downloadIliModel("https://raw.githubusercontent.com/GeoWerkstatt/interlis-functions-ngk-so/main/src/model/NGK_SO_FunctionsExt_23.ili", "NGK_SO_FunctionsExt_23.ili");
-        downloadIliModel("https://raw.githubusercontent.com/GeoWerkstatt/geow-interlis-functions/master/src/model/GeoW_FunctionsExt_23.ili", "GeoW_FunctionsExt_23.ili");
+        //downloadIliModel("https://raw.githubusercontent.com/GeoWerkstatt/interlis-functions-ngk-so/main/src/model/NGK_SO_FunctionsExt_23.ili", "NGK_SO_FunctionsExt_23.ili");
+        //downloadIliModel("https://raw.githubusercontent.com/GeoWerkstatt/geow-interlis-functions/master/src/model/GeoW_FunctionsExt_23.ili", "GeoW_FunctionsExt_23.ili");
     }
 
     private static void downloadIliModel(String url, String fileName) throws IOException, URISyntaxException {
