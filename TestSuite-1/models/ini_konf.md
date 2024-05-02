@@ -9,8 +9,8 @@ models/ ist in .gitignore ausgeschlossen. Falls weitere Anpassungen in models/ g
 
 ## INI-Dateien
 
-* *gretl*.ini für die Validator-Konfiguration in GRETL
-* *web-meta.ini für die Validator-Konfiguration im ilivalidator-web-service
+* \*gretl\*.ini für die Validator-Konfiguration in GRETL (conf und metaConf).
+* *web-meta.ini für die Validator-Konfiguration im ilivalidator-web-service.
 
 ## Ausführen mittels Shell-Skript
 
