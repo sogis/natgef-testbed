@@ -47,20 +47,20 @@ public final class TestbedHelper {
                 .collect(Collectors.toMap(InterlisFunction::getQualifiedIliName, InterlisFunction::getClass));
 
         Map<String, String> prefixes = new HashMap<>();
-        prefixes.put("CheckAbklperimeterFlaechenGroesse", "SO_AFU_Naturgefahren_20230802.Auftraege.Abklaerungsperimeter.");
-        prefixes.put("CheckAbklperimeterInnerhalbSO", "SO_AFU_Naturgefahren_20230802.Auftraege.Abklaerungsperimeter.");
-        prefixes.put("CheckAbklperimeterKeineLoecher", "SO_AFU_Naturgefahren_20230802.Auftraege.Abklaerungsperimeter.");
-        prefixes.put("CheckAuftragEintrag", "SO_AFU_Naturgefahren_20230802.Auftraege.Auftrag.");
-        prefixes.put("CheckAuftragKennungen", "SO_AFU_Naturgefahren_20230802.Auftraege.Auftrag.");
-        prefixes.put("CheckTeilauftragWasserKennwert", "SO_AFU_Naturgefahren_20230802.Auftraege.Teilauftrag.");
-        prefixes.put("CheckBefundSpontaneRutschungKeineUeberragung","SO_AFU_Naturgefahren_20230802.Befunde.BefundSpontaneRutschung.");
-        prefixes.put("CheckBefundSteinBlockschlagImAbklPerimeter", "SO_AFU_Naturgefahren_20230802.Befunde.BefundSteinBlockschlag.");
-        prefixes.put("CheckBefundSteinBlockschlagJaehrlichkeit-30", "SO_AFU_Naturgefahren_20230802.Befunde.BefundSteinBlockschlag.");
-        prefixes.put("CheckBefundSteinBlockschlagKeineUeberlappung-300", "SO_AFU_Naturgefahren_20230802.Befunde.BefundSteinBlockschlag.");
-        prefixes.put("CheckBefundSteinBlockschlagKeineUeberragung", "SO_AFU_Naturgefahren_20230802.Befunde.BefundSteinBlockschlag.");
-        prefixes.put("CheckBefundSteinBlockschlag", "SO_AFU_Naturgefahren_20230802.Befunde.PQ_Jaehrlichkeit_SteinBlockschlag__Prozessquelle.");
-        prefixes.put("CheckProzessquelleKennung", "SO_AFU_Naturgefahren_20230802.Befunde.Prozessquelle.");
-        prefixes.put("CheckFliessrichtungspfeilZuHauptprozess", "SO_AFU_Naturgefahren_20230802.Befunde.Prozessquelle__Fliessrichtungspfeil.");
+        prefixes.put("CheckAbklperimeterFlaechenGroesse", "SO_AFU_Naturgefahren_20240515.Auftraege.Abklaerungsperimeter.");
+        prefixes.put("CheckAbklperimeterInnerhalbSO", "SO_AFU_Naturgefahren_20240515.Auftraege.Abklaerungsperimeter.");
+        prefixes.put("CheckAbklperimeterKeineLoecher", "SO_AFU_Naturgefahren_20240515.Auftraege.Abklaerungsperimeter.");
+        prefixes.put("CheckAuftragEintrag", "SO_AFU_Naturgefahren_20240515.Auftraege.Auftrag.");
+        prefixes.put("CheckAuftragKennungen", "SO_AFU_Naturgefahren_20240515.Auftraege.Auftrag.");
+        prefixes.put("CheckTeilauftragWasserKennwert", "SO_AFU_Naturgefahren_20240515.Auftraege.Teilauftrag.");
+        prefixes.put("CheckBefundSpontaneRutschungKeineUeberragung","SO_AFU_Naturgefahren_20240515.Befunde.BefundSpontaneRutschung.");
+        prefixes.put("CheckBefundSteinBlockschlagImAbklPerimeter", "SO_AFU_Naturgefahren_20240515.Befunde.BefundSteinBlockschlag.");
+        prefixes.put("CheckBefundSteinBlockschlagJaehrlichkeit-30", "SO_AFU_Naturgefahren_20240515.Befunde.BefundSteinBlockschlag.");
+        prefixes.put("CheckBefundSteinBlockschlagKeineUeberlappung-300", "SO_AFU_Naturgefahren_20240515.Befunde.BefundSteinBlockschlag.");
+        prefixes.put("CheckBefundSteinBlockschlagKeineUeberragung", "SO_AFU_Naturgefahren_20240515.Befunde.BefundSteinBlockschlag.");
+        prefixes.put("CheckBefundSteinBlockschlag", "SO_AFU_Naturgefahren_20240515.Befunde.PQ_Jaehrlichkeit_SteinBlockschlag__Prozessquelle.");
+        prefixes.put("CheckProzessquelleKennung", "SO_AFU_Naturgefahren_20240515.Befunde.Prozessquelle.");
+        prefixes.put("CheckFliessrichtungspfeilZuHauptprozess", "SO_AFU_Naturgefahren_20240515.Befunde.Prozessquelle__Fliessrichtungspfeil.");
 
         CONSTRAINT_PREFIXES = prefixes;
     }

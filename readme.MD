@@ -1,6 +1,6 @@
-# Testbed Constraints Datenmodell 'SO_AFU_Naturgefahren_20230802'
+# Testbed Constraints Datenmodell 'SO_AFU_Naturgefahren_20240515'
 
-Mittels diesem Testbed kann das Modell 'SO_AFU_Naturgefahren_20230802' in bezug auf die spezifischen Constraints getestet werden.
+Mittels diesem Testbed kann das Modell 'SO_AFU_Naturgefahren_20240515' in bezug auf die spezifischen Constraints getestet werden.
 Die ca. 110 Constraints wurden dafür in 12 Typen-Kategorien eingeteilt und für jeden Kategorie liegt mindestens ein Failcase vor:
 
 ## Übersicht Constraint-Typen / Testbed-Abdeckung
@@ -125,7 +125,7 @@ Die ca. 110 Constraints wurden dafür in 12 Typen-Kategorien eingeteilt und für
 ## Aufruf Testbed via Runner (Powershell)
 
 ```
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/sogis/p-naturgefahren-ili/main/modell/SO_AFU_Naturgefahren_20230802.ili" -OutFile "SO_AFU_Naturgefahren_20230802.ili"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/sogis/p-naturgefahren-ili/main/modell/SO_AFU_Naturgefahren_20240515.ili" -OutFile "SO_AFU_Naturgefahren_20240515.ili"
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/GeoWerkstatt/interlis-functions-ngk-so/main/src/model/NGK_SO_FunctionsExt_23.ili" -OutFile "NGK_SO_FunctionsExt_23.ili"
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/GeoWerkstatt/geow-interlis-functions/master/src/model/GeoW_FunctionsExt_23.ili" -OutFile "GeoW_FunctionsExt_23.ili"
 java.exe -jar .\_Runner\interlis-testbed-runner-0.0.1-SNAPSHOT\lib\interlis-testbed-runner-0.0.1-SNAPSHOT.jar --validator ilivalidator-1.14.2-SNAPSHOT.jar .\TestSuite-1

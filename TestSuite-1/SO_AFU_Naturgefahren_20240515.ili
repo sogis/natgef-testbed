@@ -11,7 +11,7 @@ INTERLIS 2.3;
  ==============================================================================
 */
 !!@ technicalContact=mailto:agi@bd.so.ch
-MODEL SO_AFU_Naturgefahren_20230802 (de) 
+MODEL SO_AFU_Naturgefahren_20240515 (de) 
   AT "http://geo.so.ch/models/AFU" VERSION "2024-05-02" =
 
   IMPORTS UNQUALIFIED Units, Time, CoordSys;
@@ -616,7 +616,7 @@ MODEL SO_AFU_Naturgefahren_20230802 (de)
       /** Ein Teilauftrag hat entweder keine oder eine Prozessquelle.
          Hat ein Teilauftrag KEINE Prozessquelle, ist durch den Auftragnehmer eine Prozessquelle zu definieren. */
       Prozessquelle_R -- {0..*} Prozessquelle;
-      Teilauftrag_R (EXTERNAL) -- {1} SO_AFU_Naturgefahren_20230802.Auftraege.Teilauftrag;
+      Teilauftrag_R (EXTERNAL) -- {1} SO_AFU_Naturgefahren_20240515.Auftraege.Teilauftrag;
     END Teilauftrag__Prozessquelle;
 
     ASSOCIATION PQ_Jaehrlichkeit_SteinBlockschlag__Prozessquelle =
@@ -1033,4 +1033,4 @@ MODEL SO_AFU_Naturgefahren_20230802 (de)
     
   END Befunde;  
 
-END SO_AFU_Naturgefahren_20230802.
+END SO_AFU_Naturgefahren_20240515.
