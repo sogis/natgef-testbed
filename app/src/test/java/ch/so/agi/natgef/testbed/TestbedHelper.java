@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public final class TestbedHelper {
     public static final Path BASE_PATH = Path.of("../TestSuite-1");
-    public static final Path BASE_DATA_FILE = BASE_PATH.resolve("NGK_SO_Testbeddata.xtf");
+    public static final Path BASE_DATA_FILE = BASE_PATH.resolve("AllPassBaseData.xtf");
     public static final Path MODEL_PATH = BASE_PATH.resolve("models");
     public static final Path OUTPUT_PATH = BASE_PATH.resolve("output");
     public static final String FAILCASE_NAME_DEFAULT = "Failcase-1.xtf";
@@ -52,7 +52,6 @@ public final class TestbedHelper {
         prefixes.put("CheckAbklperimeterKeineLoecher", "SO_AFU_Naturgefahren_20240515.Auftraege.Abklaerungsperimeter.");
         prefixes.put("CheckAuftragVorhanden", "SO_AFU_Naturgefahren_20240515.Auftraege.Auftrag.");
         prefixes.put("CheckAuftragKennungen", "SO_AFU_Naturgefahren_20240515.Auftraege.Auftrag.");
-        prefixes.put("CheckTeilauftragWasserKennwert", "SO_AFU_Naturgefahren_20240515.Auftraege.Teilauftrag.");
         prefixes.put("CheckBefundSpontaneRutschungKeineUeberragung","SO_AFU_Naturgefahren_20240515.Befunde.BefundSpontaneRutschung.");
         prefixes.put("CheckBefundSteinBlockschlagImAbklPerimeter", "SO_AFU_Naturgefahren_20240515.Befunde.BefundSteinBlockschlag.");
         prefixes.put("CheckBefundSteinBlockschlagJaehrlichkeit-30", "SO_AFU_Naturgefahren_20240515.Befunde.BefundSteinBlockschlag.");
@@ -60,6 +59,7 @@ public final class TestbedHelper {
         prefixes.put("CheckBefundSteinBlockschlagKeineUeberragung", "SO_AFU_Naturgefahren_20240515.Befunde.BefundSteinBlockschlag.");
         prefixes.put("CheckBefundSteinBlockschlag", "SO_AFU_Naturgefahren_20240515.Befunde.PQ_Jaehrlichkeit_SteinBlockschlag__Prozessquelle.");
         prefixes.put("CheckProzessquelleKennung", "SO_AFU_Naturgefahren_20240515.Befunde.Prozessquelle.");
+        prefixes.put("CheckTeilauftragWasserKennwert", "SO_AFU_Naturgefahren_20240515.Befunde.Prozessquelle.");
         prefixes.put("CheckFliessrichtungspfeilZuHauptprozess", "SO_AFU_Naturgefahren_20240515.Befunde.Prozessquelle__Fliessrichtungspfeil.");
 
         CONSTRAINT_PREFIXES = prefixes;

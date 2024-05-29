@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3">
+<?xml version="1.0" encoding="UTF-8"?><TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3">
 <HEADERSECTION SENDER="ili2gpkg-4.10.0-c2af4b50c5475f788286f974812b52bb0f9b19bc" VERSION="2.3"><MODELS><MODEL NAME="SO_AFU_Naturgefahren_20240515" VERSION="2023-08-02" URI="http://geo.so.ch/models/AFU"></MODEL></MODELS></HEADERSECTION>
 <DATASECTION>
-<SO_AFU_Naturgefahren_20240515.Auftraege BID="SO_AFU_Naturgefahren_20240515.Auftraege">
-<SO_AFU_Naturgefahren_20240515.Auftraege.Teilauftrag TID="5f9b4e2d-bad9-4813-a6d1-089345b377ec"><Hauptprozess>wasser</Hauptprozess><Name>Himmelried Wasser</Name><Wasserkennwerte>false</Wasserkennwerte><Auftrag_R REF="701051de-6f2f-476d-81fb-43b8885ae7fc"></Auftrag_R><Autor_R REF="0d5527a7-b50a-411a-a35c-1e7aeb1ab917"></Autor_R></SO_AFU_Naturgefahren_20240515.Auftraege.Teilauftrag>
-</SO_AFU_Naturgefahren_20240515.Auftraege>
+<SO_AFU_Naturgefahren_20240515.Befunde BID="SO_AFU_Naturgefahren_20240515.Befunde">
+<SO_AFU_Naturgefahren_20240515.Befunde.KennwertUeberschwemmungFliessgeschwindigkeit TID="4ea24387-7a71-4fb3-9ddd-6cea68da8d26" delete=""></SO_AFU_Naturgefahren_20240515.Befunde.KennwertUeberschwemmungFliessgeschwindigkeit>
+<SO_AFU_Naturgefahren_20240515.Befunde.KennwertUeberschwemmungFliessgeschwindigkeit TID="3108780d-ad05-439e-bc25-46c6fd784229" delete=""></SO_AFU_Naturgefahren_20240515.Befunde.KennwertUeberschwemmungFliessgeschwindigkeit>
+</SO_AFU_Naturgefahren_20240515.Befunde>
 </DATASECTION>
 </TRANSFER>
-<!-- Im Failcase liegt ein Teilauftrag vor mit Hauptprozess: #Wasser und Wasserkennwerte: false.-->
+<!-- Löscht die vorhandenen Kennwerte. Damit muss der Constraint ausgelöst werden, da in AllPassBaseData.xtf im Teilprozess Kennwerte=true gesetzt ist. -->
