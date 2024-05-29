@@ -1,2 +1,0 @@
-cp -f ../../NGK_SO_Testbeddata.xtf ../NGK_SO_Testbeddata.xtf
-java -jar /home/oliver/tools/ilivalidator-1.14.1/ilivalidator-1.14.1.jar --config ../SO_AFU_Naturgefahren_20240515-gretl.ini --metaConfig ../SO_AFU_Naturgefahren_20240515-gretl-meta.ini ../NGK_SO_Testbeddata.xtf
