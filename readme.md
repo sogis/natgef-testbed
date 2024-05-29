@@ -115,6 +115,52 @@ Die ca. 110 Constraints wurden dafür in 12 Typen-Kategorien eingeteilt und für
 
 ### IsInsideAreaByCode (Überragung)
 
+IWCodeSteinBlockschlag:
+
+* CheckBefundSteinBlockschlagKeineUeberragung 
+
+IWCodeStandard:
+
+* CheckBefundSpontaneRutschungKeineUeberragung
+* CheckBefundHangmureKeineUeberragung
+* CheckBefundUeberschwemmungDynamischKeineUeberragung
+* CheckBefundUeberschwemmungStatischKeineUeberragung
+
+
+IWCodeBergFelssturz:
+
+* CheckBefundBergFelssturzKeineUeberragung
+
+IWCodeAbsenkungEinsturz:
+
+* CheckBefundAbsenkungKeineUeberragung
+* CheckBefundEinsturzKeineUeberragung
+
+IWCodeUebermurung:
+
+* CheckBefundUebermurungKeineUeberragung
+
+Jährlichkeit als Einzel-Zahlattribut:
+
+* CheckBefundJaehrlichkeitKeineUeberragung
+
+Jährlichkeit als Einzel-Codeattribut:
+
+  * CheckKennwertUeberschwemmungFliesstiefeKeineUeberragungJaehrlichkeit
+  * CheckKennwertUebermurungFliesstiefeKeineUeberragungJaehrlichkeit
+  * ?CheckKennwertUeberschwemmungFliessgeschwindigkeitKeineUeberragungJaehrlichkeit
+  * ?CheckKennwertUebermurungFliessgeschwindigkeitKeineUeberragungJaehrlichkeit
+
+Kennwert als Einzel-Codeattribut Höhe oder Geschwindigkeit:
+
+  * CheckKennwertUeberschwemmungFliesstiefeKeineUeberragungH
+  * CheckKennwertUeberschwemmungFliessgeschwindigkeitKeineUeberragungH
+  * CheckKennwertUebermurungFliesstiefeKeineUeberragungH
+  * CheckKennwertUebermurungFliessgeschwindigkeitKeineUeberragungH
+
+    
+
+
 * Beispiele:
   * **SET CONSTRAINT GeoW_FunctionsExt.IsInsideAreaByCode(GeoW_FunctionsExt.GetInGroups(ALL, "PQ_Jaehrlichkeit_SteinBlockschlag_R->Prozessquelle_R"), "Geometrie" ,"IWCode");**
 * Abgedeckte Constraints:
