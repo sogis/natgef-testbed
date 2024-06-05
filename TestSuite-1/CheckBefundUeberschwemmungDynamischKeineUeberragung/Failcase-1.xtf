@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3">
+<HEADERSECTION SENDER="ili2gpkg-5.0.0-20f2bb62307ba6329a125fc6f10965ad9a4e6300" VERSION="2.3"><MODELS><MODEL NAME="SO_AFU_Naturgefahren_20240515" VERSION="2024-02-14" URI="http://geo.so.ch/models/AFU"></MODEL></MODELS></HEADERSECTION>
+<DATASECTION>
+<SO_AFU_Naturgefahren_20240515.Befunde BID="SO_AFU_Naturgefahren_20240515.Befunde">
+<SO_AFU_Naturgefahren_20240515.Befunde.BefundUeberschwemmungDynamisch TID="745b94a3-0873-47a4-8c69-a2eb54140310"><Geometrie><SURFACE><BOUNDARY><POLYLINE><COORD><C1>2610010.000</C1><C2>1252500.000</C2></COORD><COORD><C1>2610010.000</C1><C2>1252480.000</C2></COORD><COORD><C1>2610050.000</C1><C2>1252480.000</C2></COORD><COORD><C1>2610030.000</C1><C2>1252500.000</C2></COORD><COORD><C1>2610010.000</C1><C2>1252500.000</C2></COORD></POLYLINE></BOUNDARY></SURFACE></Geometrie><Prozessquelle_R REF="6b665bb3-3032-447c-b314-7457de104a42"></Prozessquelle_R><IWCode>rot_stark_30</IWCode></SO_AFU_Naturgefahren_20240515.Befunde.BefundUeberschwemmungDynamisch>
+</SO_AFU_Naturgefahren_20240515.Befunde>
+</DATASECTION>
+</TRANSFER>
+<!-- Der Failcase verändert die Geometrie von rot_stark_30, so dass ein "Spike" rechts die Geometrie von rot_stark_100 überragt -->

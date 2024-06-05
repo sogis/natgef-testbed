@@ -61,6 +61,7 @@ public final class TestbedHelper {
         prefixes.put("CheckProzessquelleKennung", "SO_AFU_Naturgefahren_20240515.Befunde.Prozessquelle.");
         prefixes.put("CheckTeilauftragWasserKennwert", "SO_AFU_Naturgefahren_20240515.Befunde.Prozessquelle.");
         prefixes.put("CheckFliessrichtungspfeilZuHauptprozess", "SO_AFU_Naturgefahren_20240515.Befunde.Prozessquelle__Fliessrichtungspfeil.");
+        prefixes.put("CheckBefundUeberschwemmungDynamischKeineUeberragung", "SO_AFU_Naturgefahren_20240515.Befunde.BefundUeberschwemmungDynamisch.");     
 
         CONSTRAINT_PREFIXES = prefixes;
     }
