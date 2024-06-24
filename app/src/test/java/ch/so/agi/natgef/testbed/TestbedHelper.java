@@ -24,8 +24,11 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public final class TestbedHelper {
-    public static final Path BASE_PATH = Path.of("../TestSuite-1");
+    public static final Path BASE_PATH = Path.of("../test_data");
     public static final Path BASE_DATA_FILE = BASE_PATH.resolve("AllPassBaseData.xtf");
+    public static final Path[] DATA_FILES = {
+        BASE_PATH.resolve("LoadTestData.xtf")
+    };
     public static final Path MODEL_PATH = BASE_PATH.resolve("models");
     public static final Path OUTPUT_PATH = BASE_PATH.resolve("output");
     public static final String FAILCASE_NAME_DEFAULT = "Failcase-1.xtf";

@@ -5,10 +5,9 @@ build/
 !**/src/test/**/build/
 
 # Project-specific files and folders
-TestSuite-1/models/
-TestSuite-1/output/
+test_data/models/
+test_data/output/
 misc/
-GK_NFM_Himmelried_neustesDM_2.zip
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
