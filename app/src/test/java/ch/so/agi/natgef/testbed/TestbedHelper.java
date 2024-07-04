@@ -30,6 +30,7 @@ public final class TestbedHelper {
         BASE_PATH.resolve("LoadTestData.xtf")
     };
     public static final Path MODEL_PATH = BASE_PATH.resolve("models");
+    //public static final Path MODEL_PATH = BASE_PATH.resolve("/home/oliver/code/sogis-interlis-repository/models/AFU");
     public static final Path OUTPUT_PATH = BASE_PATH.resolve("output");
     public static final String FAILCASE_NAME_DEFAULT = "Failcase-1.xtf";
 

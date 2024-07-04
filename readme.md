@@ -182,7 +182,7 @@ Die ca. 110 Constraints wurden dafür in 12 Typen-Kategorien eingeteilt und für
   * CheckBefundUeberschwemmungStatischImAbklPerimeter
   * CheckBefundJaehrlichkeitImAbklPerimeter
 
-### AreAreas mit Filter
+### AreAreas mit Filter !!Deaktiviert, bis Area-Verbesserungen vorliegen!!
 
 * Beispiele:
   * **SET CONSTRAINT WHERE IWCode == #rot_stark_30 OR IWCode == #rot_mittel_30 OR IWCode == #blau_schwach_30: INTERLIS.areAreas(GeoW_FunctionsExt.GetInGroups(ALL, "Prozessquelle_R"),UNDEFINED, >> Geometrie);**
