@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.nio.file.Path;
 
 public class BefundSteinBlockschlagKeineUeberlappung300Test extends TestBase {
-    //@Test
+    @Test
     public void checkConstraint() {
         TestbedHelper.assertMergeHasConstraintError("CheckBefundSteinBlockschlagKeineUeberlappung-300");
     }

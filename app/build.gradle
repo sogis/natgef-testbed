@@ -14,9 +14,9 @@ dependencies {
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
     testImplementation 'io.github.sogis:ilivalidator-custom-functions-geometries:0.0.8'
-    testImplementation 'ch.interlis:ilivalidator:1.14.1'
+    testImplementation 'ch.interlis:ilivalidator:1.14.3'
     testImplementation 'ch.geowerkstatt.ilivalidator.extensions.functions:geow-interlis-functions:0.2.0'
-    testImplementation 'ch.geowerkstatt.ilivalidator.extensions.functions:interlis-functions-ngk-so:1.0.1'
+    testImplementation 'ch.geowerkstatt.ilivalidator.extensions.functions:interlis-functions-ngk-so:1.0.2'
     testImplementation 'ch.geowerkstatt.interlis.testbed.runner:interlis-testbed-runner:1.0.0'
 }
 
