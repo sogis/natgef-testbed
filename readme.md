@@ -224,3 +224,5 @@ Die ca. 110 Constraints wurden dafür in 12 Typen-Kategorien eingeteilt und für
 ## Merge-Logik der XTF-Dateien siehe im Repo:
 
 https://github.com/GeoWerkstatt/interlis-testbed-runner
+
+Falls nicht mehr erreichbar: [Kopie der Doku (abgerufen am 10.7.2025)](runner_doc_copy.md)
