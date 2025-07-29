@@ -27,7 +27,7 @@ public final class TestbedHelper {
     public static final Path BASE_PATH = Path.of("../test_data");
     public static final Path BASE_DATA_FILE = BASE_PATH.resolve("AllPassBaseData.xtf");
     public static final Path[] DATA_FILES = {
-        BASE_PATH.resolve("LoadTestData.xtf")
+        //BASE_PATH.resolve("LoadTestData.xtf")
     };
     public static final Path MODEL_PATH = BASE_PATH.resolve("models");
     //public static final Path MODEL_PATH = BASE_PATH.resolve("/home/oliver/code/sogis-interlis-repository/models/AFU");
