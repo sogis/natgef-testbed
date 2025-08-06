@@ -56,6 +56,7 @@ public final class TestbedHelper {
         prefixes.put("CheckAbklperimeterKeineLoecher", "SO_AFU_Naturgefahren_20240515.Auftraege.Abklaerungsperimeter.");
         prefixes.put("CheckAuftragVorhanden", "SO_AFU_Naturgefahren_20240515.Auftraege.Auftrag.");
         prefixes.put("CheckAuftragKennungen", "SO_AFU_Naturgefahren_20240515.Auftraege.Auftrag.");
+        prefixes.put("CheckBefundPermanenteRutschungIWCode", "SO_AFU_Naturgefahren_20240515.Befunde.BefundPermanenteRutschung.");
         prefixes.put("CheckBefundSpontaneRutschungKeineUeberragung","SO_AFU_Naturgefahren_20240515.Befunde.BefundSpontaneRutschung.");
         prefixes.put("CheckBefundSteinBlockschlagImAbklPerimeter", "SO_AFU_Naturgefahren_20240515.Befunde.BefundSteinBlockschlag.");
         prefixes.put("CheckBefundSteinBlockschlagJaehrlichkeit-30", "SO_AFU_Naturgefahren_20240515.Befunde.BefundSteinBlockschlag.");
