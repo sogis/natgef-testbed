@@ -16,7 +16,7 @@
 
 Am Beispiel des Constraints "MyNewConstraint":
 
-* Neues Verzeichnis test_data/MyNewConstraint/ anlegen und Failcase-1.xtf anlegen. Beachten: Kommentare in Failcase-1.xtf am Ende einfügen.
+* Neues Verzeichnis test_data/MyNewConstraint/ anlegen und 1-n Failcase.xtf anlegen. Beachten: Kommentare in Failcase.xtf am Ende einfügen.
 * Unter app/src/test/java/ch/so/agi/natgef/testbed/befunde/ oder .../auftraege/ die Klasse MyNewConstraint.java mit der Testmethode anlegen.
 * In app/src/test/java/ch/so/agi/natgef/testbed/TestbedHelper.java in "prefixes" den Prefix für MyNewConstraint eintragen.   
 Prefix: Voll qualifizierter Name der INTERLIS-Klasse des Constraints.

@@ -13,6 +13,7 @@ import org.junit.jupiter.api.Assertions;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
+import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.HashMap;
@@ -30,7 +31,6 @@ public final class TestbedHelper {
         //BASE_PATH.resolve("LoadTestData.xtf")
     };
     public static final Path MODEL_PATH = BASE_PATH.resolve("models");
-    //public static final Path MODEL_PATH = BASE_PATH.resolve("/home/oliver/code/sogis-interlis-repository/models/AFU");
     public static final Path OUTPUT_PATH = BASE_PATH.resolve("output");
     public static final String FAILCASE_NAME_DEFAULT = "Failcase-1.xtf";
 
@@ -88,7 +88,13 @@ public final class TestbedHelper {
     }
 
     public static void assertMergeHasConstraintError(String constraintName){
-        assertMergeHasConstraintError(constraintName, TestbedHelper.FAILCASE_NAME_DEFAULT);
+        File failCasesDir = TestbedHelper.BASE_PATH.resolve(constraintName).toFile();
+        File[] xtfFragments = failCasesDir.listFiles((dir, fileName) -> fileName.toLowerCase().endsWith(".xtf"));
+
+        for(File xtfFrag : xtfFragments)
+            assertMergeHasConstraintError(constraintName, xtfFrag.getName());
+
+            //FAILCASE_NAME_DEFAULT
     }
 
     public static void assertMergeHasConstraintError(String constraintName, String failCaseFileName) {
@@ -122,7 +128,7 @@ public final class TestbedHelper {
     private static void assertHasConstraintError(Path logFile, String constraintName) {
         try {
             boolean hasConstraintError = IliValidatorLogParser.containsConstraintError(logFile, constraintName);
-            assertTrue(hasConstraintError, "Log file should contain constraint error.");
+            assertTrue(hasConstraintError, "Log file should contain error for constraint " + constraintName + ".");
         } catch (ValidatorException e) {
             Assertions.fail(e);
         }
