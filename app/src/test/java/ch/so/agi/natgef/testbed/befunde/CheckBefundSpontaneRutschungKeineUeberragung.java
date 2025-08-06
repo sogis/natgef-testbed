@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 
 import java.nio.file.Path;
 
-public class CheckBefundPermanenteRutschungIWCodeTest extends TestBase {
+public class CheckBefundSpontaneRutschungKeineUeberragung extends TestBase {
     @Test
     public void checkConstraint() {
-        TestbedHelper.assertMergeHasConstraintError("CheckBefundPermanenteRutschungIWCode");
+        TestbedHelper.assertMergeHasConstraintError("CheckBefundSpontaneRutschungKeineUeberragung");
     }
 }

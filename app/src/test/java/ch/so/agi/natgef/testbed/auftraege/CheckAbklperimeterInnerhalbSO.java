@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 
 import java.nio.file.Path;
 
-public class AbklperimeterFlaechenGroesseTest extends TestBase {
+public class CheckAbklperimeterInnerhalbSO extends TestBase {
     @Test
     public void checkConstraint() {
-        TestbedHelper.assertMergeHasConstraintError("CheckAbklperimeterFlaechenGroesse");
+        TestbedHelper.assertMergeHasConstraintError("CheckAbklperimeterInnerhalbSO");
     }
 }

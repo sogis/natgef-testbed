@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 
 import java.nio.file.Path;
 
-public class BefundSteinBlockschlagKeineUeberragungTest extends TestBase {
+public class CheckBefundSteinBlockschlagJaehrlichkeit_30 extends TestBase {
     @Test
     public void checkConstraint() {
-        TestbedHelper.assertMergeHasConstraintError("CheckBefundSteinBlockschlagKeineUeberragung");
+        TestbedHelper.assertMergeHasConstraintError("CheckBefundSteinBlockschlagJaehrlichkeit-30");
     }
 }

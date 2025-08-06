@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 
 import java.nio.file.Path;
 
-public class AuftragVorhandenTest extends TestBase {
+public class CheckTeilauftragWasserKennwert extends TestBase {
     @Test
     public void checkConstraint() {
-        TestbedHelper.assertMergeHasConstraintError("CheckAuftragVorhanden");
+        TestbedHelper.assertMergeHasConstraintError("CheckTeilauftragWasserKennwert");
     }
 }

@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.nio.file.Path;
 
-public class BefundSteinBlockschlagImAbklPerimeterTest extends TestBase {
+public class CheckBefundSteinBlockschlagImAbklPerimeter extends TestBase {
     @Test
     public void checkConstraint() {
         TestbedHelper.assertMergeHasConstraintError("CheckBefundSteinBlockschlagImAbklPerimeter");

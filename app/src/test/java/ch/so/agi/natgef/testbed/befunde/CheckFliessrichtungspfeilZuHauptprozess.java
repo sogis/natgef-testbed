@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.nio.file.Path;
 
-public class FliessrichtungspfeilZuHauptprozessTest extends TestBase {
+public class CheckFliessrichtungspfeilZuHauptprozess extends TestBase {
     @Test
     public void checkConstraint() {
         TestbedHelper.assertMergeHasConstraintError("CheckFliessrichtungspfeilZuHauptprozess");

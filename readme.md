@@ -9,8 +9,17 @@
 ### Ausführen eines einzelnen Tests
 
 ```
-./gradlew clean test --tests AuftragKennungenTest
+./gradlew clean test --tests CheckAuftragKennungen
 ```
+
+## Schritte zum Ergänzen weiterer Tests
+
+Am Beispiel des Constraints "MyNewConstraint":
+
+* Neues Verzeichnis test_data/MyNewConstraint/ anlegen und Failcase-1.xtf anlegen. Beachten: Kommentare in Failcase-1.xtf am Ende einfügen.
+* Unter app/src/test/java/ch/so/agi/natgef/testbed/befunde/ oder .../auftraege/ die Klasse MyNewConstraint.java mit der Testmethode anlegen.
+* In app/src/test/java/ch/so/agi/natgef/testbed/TestbedHelper.java in "prefixes" den Prefix für MyNewConstraint eintragen.   
+Prefix: Voll qualifizierter Name der INTERLIS-Klasse des Constraints.
 
 ## Übersicht Constraint-Typen / Testbed-Abdeckung
 
@@ -42,8 +51,7 @@ Die ca. 110 Constraints wurden dafür in 12 Typen-Kategorien eingeteilt und für
   * **MANDATORY CONSTRAINT (Hauptprozess != #Wasser) OR Wasserkennwerte;**
 * Abgedeckte Constraints:
   * CheckTeilauftragWasserKennwert
-* Weitere Constraints:
-  * Keine
+  * CheckBefundPermanenteRutschungIWCode
 
 ### GetArea
 
