@@ -21,6 +21,28 @@ Am Beispiel des Constraints "MyNewConstraint":
 * In app/src/test/java/ch/so/agi/natgef/testbed/TestbedHelper.java in "prefixes" den Prefix für MyNewConstraint eintragen.   
 Prefix: Voll qualifizierter Name der INTERLIS-Klasse des Constraints.
 
+## Merge-Logik der XTF-Dateien siehe im Repo:
+
+https://github.com/GeoWerkstatt/interlis-testbed-runner
+
+Falls nicht mehr erreichbar: [Kopie der Doku (abgerufen am 10.7.2025)](runner_doc_copy.md)
+
+## Biblikotheken zur Validierung
+
+Gewisse Constraints sind in den folgenden Funktionsbibliotheken umgesetzt:
+* ilivalidator
+* geow-interlis-functions
+* interlis-functions-ngk-so
+* ilivalidator-custom-functions-geometries
+
+(Vollqualifizierte Namen und aktuelle Versionen siehe [app/build.gradle](app/build.gradle))
+
+Die Naturgefahren-Daten werden im GRETL-Importjob und im ilivalidator-web-service (https://geo.so.ch/ilivalidator/) validiert. 
+Zwischen Gretl und dem ilivalidator-web-service sind manchmal aufgrund unterschiedlicher Update-Zyklen unterschiedliche Versionen der Bibliotheken nicht vermeidbar, was zu unterschiedlichem Verhalten führen kann. Die Bibliothekversionen in den folgenden Dateien konfiguriert:
+
+* ilivalidator-web-service: In der Datei [pom.xml](https://github.com/sogis/ilivalidatorws/blob/main/ilivalidator-web-service-server/pom.xml)
+* GRETL: In der Datei [libs.versions.toml](https://github.com/sogis/gretl/blob/main/gradle/libs.versions.toml) im Verzeichnis gradle/   
+
 ## Übersicht Constraint-Typen / Testbed-Abdeckung
 
 Mittels diesem Testbed kann das Modell 'SO_AFU_Naturgefahren_20240515' in bezug auf die spezifischen Constraints getestet werden.
@@ -228,9 +250,3 @@ Die ca. 110 Constraints wurden dafür in 12 Typen-Kategorien eingeteilt und für
   * CheckBefundUeberschwemmungStatischKeineUeberlappung-100
   * CheckBefundUeberschwemmungStatischKeineUeberlappung-300
   * CheckBefundUeberschwemmungStatischKeineUeberlappung-Restgef
-
-## Merge-Logik der XTF-Dateien siehe im Repo:
-
-https://github.com/GeoWerkstatt/interlis-testbed-runner
-
-Falls nicht mehr erreichbar: [Kopie der Doku (abgerufen am 10.7.2025)](runner_doc_copy.md)
